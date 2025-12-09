@@ -1,0 +1,19 @@
+# Arquivos compilados
+*.class
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Sistema
+.DS_Store
+Thumbs.db
