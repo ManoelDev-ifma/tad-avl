@@ -8,24 +8,29 @@ echo "║   SISTEMA DE ESTOQUE - Árvore AVL                  ║"
 echo "╚════════════════════════════════════════════════════╝"
 echo ""
 
-cd src
-
 case "$1" in
     teste)
         echo "🧪 Compilando e executando testes..."
-        javac AVLNode.java ArvoreAVL.java Peca.java EstoqueOficina.java TesteEstoque.java && java TesteEstoque
+        cd src
+        javac AVLNode.java ArvoreAVL.java Peca.java EstoqueOficina.java
+        cd ../test
+        javac -cp ../src TesteEstoque.java TesteArvoreAVL.java && java -cp ../src:. TesteEstoque
+        cd ..
         ;;
     sistema)
         echo "🏪 Iniciando sistema interativo de estoque..."
+        cd src
         javac AVLNode.java ArvoreAVL.java Peca.java EstoqueOficina.java SistemaEstoque.java && java SistemaEstoque
+        cd ..
         ;;
     limpar)
         echo "🧹 Limpando arquivos .class..."
-        rm -f *.class
+        rm -f src/*.class test/*.class
         echo "✅ Pronto!"
         ;;
     *)
         echo "📦 Compilando sistema..."
+        cd src
         javac AVLNode.java ArvoreAVL.java Peca.java EstoqueOficina.java
         if [ $? -eq 0 ]; then
             echo "✅ Compilação OK!"
@@ -37,7 +42,6 @@ case "$1" in
         else
             echo "❌ Erro na compilação!"
         fi
+        cd ..
         ;;
 esac
-
-cd ..
