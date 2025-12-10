@@ -200,6 +200,11 @@ public class ArvoreAVL<T extends Comparable<T>> {
         tamanho = 0;
     }
 
+    // Retorna a raiz
+    public AVLNode<T> obterRaiz() {
+        return raiz;
+    }
+
     // Percurso em ordem
     public void emOrdem() {
         System.out.print("Em ordem: ");
