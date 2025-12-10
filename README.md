@@ -4,16 +4,6 @@
 
 Implementação completa de uma **Árvore AVL** (Árvore Binária de Busca Auto-Balanceada) em Java com aplicação prática: sistema de gestão de estoque de peças automotivas.Implementação de uma Árvore AVL (Árvore Binária de Busca Auto-Balanceada) em Java com Generics.
 
-
-
----## O que é?
-
-
-
-## 📋 ÍndiceUma Árvore AVL mantém o balanceamento automático garantindo que a diferença de altura entre as subárvores esquerda e direita de qualquer nó seja no máximo 1. Isso garante que todas as operações sejam **O(log n)**.
-
-
-
 1. [O que é Árvore AVL?](#o-que-é-árvore-avl)## Aplicação Real: Sistema de Estoque para Oficina Mecânica
 
 2. [Por que Árvore AVL?](#por-que-árvore-avl)
