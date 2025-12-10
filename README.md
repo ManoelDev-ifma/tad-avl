@@ -1,6 +1,4 @@
-# 🌳 Árvore AVL - Sistema de Estoque para Oficina Mecânica# 🌳 Árvore AVL - Sistema de Estoque para Oficina Mecânica# Árvore AVL em Português
-
-
+# 🌳 Árvore AVL - Sistema de Estoque para Oficina Mecânica# 
 
 Implementação completa de uma **Árvore AVL** (Árvore Binária de Busca Auto-Balanceada) em Java com aplicação prática: sistema de gestão de estoque de peças automotivas.
 
