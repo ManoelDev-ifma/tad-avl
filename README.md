@@ -163,7 +163,7 @@ arvore.limpar();
 ### O Problema## Métodos Disponíveis
 
 
-
+P
 Uma oficina mecânica precisa gerenciar milhares de peças:### Operações Básicas
 
 - Óleo, filtros, pastilhas, correntes, velas, baterias...- `inserir(dado)` - Insere elemento na árvore
@@ -310,72 +310,6 @@ Saída esperada:    │   ├── 20 (h:1, fb:0)
 
 ```A árvore funciona com qualquer tipo que implemente `Comparable`:
 
-
-
-Menu com 10 operações:```java
-
-```// Inteiros
-
-1. Cadastrar nova peçaArvoreAVL<Integer> numeros = new ArvoreAVL<>();
-
-2. Buscar peça por códigonumeros.inserir(10);
-
-3. Atualizar quantidade
-
-4. Atualizar preço// Strings
-
-5. Remover peçaArvoreAVL<String> nomes = new ArvoreAVL<>();
-
-6. Exibir estoque completonomes.inserir("Ana");
-
-7. Valor total do estoquenomes.inserir("Bruno");
-
-8. Listar estoque baixonomes.inserir("Carlos");
-
-9. Total de tipos de peças
-
-0. Sair// Doubles
-
-```ArvoreAVL<Double> valores = new ArvoreAVL<>();
-
-valores.inserir(3.14);
-
----```
-
-
-
-## Como Usar## Características
-
-
-
-### Opção 1: Compilação Manual✅ Código limpo e direto  
-
-✅ Métodos em português  
-
-```bash✅ Auto-balanceamento automático  
-
-cd src✅ Suporte a Generics  
-
-javac AVLNode.java ArvoreAVL.java Peca.java EstoqueOficina.java TesteEstoque.java✅ Visualização clara da estrutura  
-
-java TesteEstoque✅ Testes completos incluídos  
-
-```✅ Complexidade O(log n) garantida  
-
-
-
-### Opção 2: Sistema Interativo---
-
-
-
-```bash**Desenvolvido para Estruturas de Dados II**  
-
-cd src*8 de dezembro de 2025*
-
-javac AVLNode.java ArvoreAVL.java Peca.java EstoqueOficina.java SistemaEstoque.java# tad-avl
-
-java SistemaEstoque
-```
 
 ### Opção 3: Script Automatizado (Recomendado)
 
@@ -904,17 +838,6 @@ System.out.println("10.000 buscas em " + tempo + "ms");
 - Espaço é **crítico** (AVL usa mais memória)
 
 ---
-
-## 🏁 Próximos Passos
-
-1. **Execute o teste:** `./simples.sh teste`
-2. **Experimente o menu:** `./simples.sh sistema`
-3. **Modifique os dados:** Adicione suas peças
-4. **Estude o código:** Leia `src/ArvoreAVL.java`
-5. **Implemente extensões:** Persistência, busca por nome, etc.
-
----
-
 **Desenvolvido com ❤️ para fins educacionais e práticos.**
 
 última atualização: 10 de dezembro de 2025
