@@ -44,18 +44,6 @@ Diferença real: 10.000 peças = 10.000 comparações vs. 14 comparações!
 
 Isso significa que em qualquer nó da árvore, a diferença entre as alturas das subárvores esquerda e direita é no máximo 1.
 
-### Compilar
-
-**Resultado:** Todas as operações (busca, inserção, remoção) são **garantidamente O(log n)**, nunca ficam lentas! ⚡```bash
-
-cd src
-
-### Exemplo Visualjavac AVLNode.java ArvoreAVL.java Peca.java EstoqueOficina.java TesteEstoque.java
-
-```
-
-```
-
 Árvore AVL balanceada (3 peças):### Executar Teste
 
            [1003]```bash
