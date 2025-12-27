@@ -7,7 +7,7 @@ public class ArvoreAVL<T extends Comparable<T>> {
         this.tamanho = 0;
     }
 
-    // Retorna a altura de um nó
+    // Retorna a altura de um nó -- IMPORTANTE
     private int altura(AVLNode<T> no) {
         return no == null ? 0 : no.altura;
     }
@@ -15,28 +15,30 @@ public class ArvoreAVL<T extends Comparable<T>> {
     // Atualiza a altura de um nó
     private void atualizarAltura(AVLNode<T> no) {
         if (no != null) {
+            // qual o maior valor entre as alturas dos filhos + 1
             no.altura = 1 + Math.max(altura(no.esquerda), altura(no.direita));
         }
     }
 
-    // Calcula o fator de balanceamento
+    // Calcula o fator de balanceamento - Fórmula padrão
     private int fatorBalanceamento(AVLNode<T> no) {
         return no == null ? 0 : altura(no.esquerda) - altura(no.direita);
     }
 
-    // Rotação à direita
+    // Rotação à direita -- IMPORTANTE
     private AVLNode<T> rotacaoDireita(AVLNode<T> p) {
         AVLNode<T> q = p.esquerda;
         p.esquerda = q.direita;
         q.direita = p;
         
+        // Atualizar a aultura é importante após rotações, pois a estrutura da árvore muda.
         atualizarAltura(p);
         atualizarAltura(q);
         
         return q;
     }
 
-    // Rotação à esquerda
+    // Rotação à esquerda 
     private AVLNode<T> rotacaoEsquerda(AVLNode<T> p) {
         AVLNode<T> q = p.direita;
         p.direita = q.esquerda;
@@ -48,7 +50,7 @@ public class ArvoreAVL<T extends Comparable<T>> {
         return q;
     }
 
-    // Balanceia um nó
+    // Balanceia um nó - com base na teoria de árvores AVL
     private AVLNode<T> balancear(AVLNode<T> no) {
         if (no == null) return null;
 
@@ -91,6 +93,7 @@ public class ArvoreAVL<T extends Comparable<T>> {
             return new AVLNode<>(dado);
         }
 
+        // cmp é a comparação entre os dados para definir a posição de inserção.
         int cmp = dado.compareTo(no.dado);
         if (cmp < 0) {
             no.esquerda = inserirRec(no.esquerda, dado);
@@ -205,7 +208,7 @@ public class ArvoreAVL<T extends Comparable<T>> {
         return raiz;
     }
 
-    // Percurso em ordem
+    // Percurso em ordem - significa visitar o nó esquerdo, depois o nó atual, depois o nó direito
     public void emOrdem() {
         System.out.print("Em ordem: ");
         emOrdemRec(raiz);
@@ -220,7 +223,7 @@ public class ArvoreAVL<T extends Comparable<T>> {
         }
     }
 
-    // Percurso pré-ordem
+    // Percurso pré-ordem - significa visitar o nó atual, depois o nó esquerdo, depois o nó direito
     public void preOrdem() {
         System.out.print("Pré-ordem: ");
         preOrdemRec(raiz);
@@ -235,7 +238,7 @@ public class ArvoreAVL<T extends Comparable<T>> {
         }
     }
 
-    // Percurso pós-ordem
+    // Percurso pós-ordem - significa visitar o nó esquerdo, depois o nó direito, depois o nó atual
     public void posOrdem() {
         System.out.print("Pós-ordem: ");
         posOrdemRec(raiz);

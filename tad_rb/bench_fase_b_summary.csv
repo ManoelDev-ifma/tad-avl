@@ -1,0 +1,3 @@
+estrutura,n,m,repeticoes,avg_altura,std_altura,avg_tempo_ms,std_tempo_ms
+AVL,100000,100000,5,20,0.0,52.0,5.830951894845301
+Rubro-Negra,100000,100000,5,20,0.0,39.8,7.249827584156743
